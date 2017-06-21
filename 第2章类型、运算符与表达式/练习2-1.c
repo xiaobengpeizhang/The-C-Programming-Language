@@ -1,11 +1,11 @@
-/**±àĞ´Ò»¸ö³ÌĞòÒÔÈ·¶¨·Ö±ğÓÉsigned¼°unsignedÏŞ¶¨µÄchar¡¢short¡¢intÓëlongÀàĞÍ±äÁ¿µÄÈ¡Öµ·¶Î§¡£²ÉÓÃ´òÓ¡±ê×¼Í·ÎÄ¼şÖĞµÄÏàÓ¦ÖµÒÔ¼°Ö±½Ó¼ÆËãÁ½ÖÖ·½Ê½ÊµÏÖ¡£ºóÒ»ÖÖ·½·¨µÄÊµÏÖ½ÏÀ§ÄÑÒ»Ğ©£¬ÒòÎªÒªÈ·¶¨¸÷ÖÖ¸¡µãÀàĞÍµÄÈ¡Öµ·¶Î§¡£**/
+/**ç¼–å†™ä¸€ä¸ªç¨‹åºä»¥ç¡®å®šåˆ†åˆ«ç”±signedåŠunsignedé™å®šçš„charã€shortã€intä¸longç±»å‹å˜é‡çš„å–å€¼èŒƒå›´ã€‚é‡‡ç”¨æ‰“å°æ ‡å‡†å¤´æ–‡ä»¶ä¸­çš„ç›¸åº”å€¼ä»¥åŠç›´æ¥è®¡ç®—ä¸¤ç§æ–¹å¼å®ç°ã€‚åä¸€ç§æ–¹æ³•çš„å®ç°è¾ƒå›°éš¾ä¸€äº›ï¼Œå› ä¸ºè¦ç¡®å®šå„ç§æµ®ç‚¹ç±»å‹çš„å–å€¼èŒƒå›´ã€‚**/
 
 #include <stdio.h>
 #include <limits.h>
 int main()
 {
-    /**·½·¨1**/
-    printf("***********·½·¨1************\n");
+    /**æ–¹æ³•1**/
+    printf("***********æ–¹æ³•1************\n");
     printf("signed char min = %d\n", SCHAR_MIN);
     printf("signed char max = %d\n", SCHAR_MAX);
     printf("signed short min = %d\n", SHRT_MIN);
@@ -21,10 +21,10 @@ int main()
     printf("unsigned long max = %lu\n", ULONG_MAX);
 
     /*
-     *·½·¨2
-     *ÓÉÓÚ²¹Âë¹æÔò£¬µ¼ÖÂÓĞ·ûºÅnÎ»µÄÈ¡Öµ·¶Î§Îª -(2µÄn-1´Î·½) ~ (2µÄn-1´Î·½ - 1)
+     *æ–¹æ³•2
+     *ç”±äºè¡¥ç è§„åˆ™ï¼Œå¯¼è‡´æœ‰ç¬¦å·nä½çš„å–å€¼èŒƒå›´ä¸º -(2çš„n-1æ¬¡æ–¹) ~ (2çš„n-1æ¬¡æ–¹ - 1)
      */
-    printf("***********·½·¨2************\n");
+    printf("***********æ–¹æ³•2************\n");
     printf("signed char min = %d\n", -(signed char)((unsigned char)~0 >> 1) - 1);
     printf("signed char max = %d\n", (signed char)((unsigned char)~0 >> 1));
     printf("signed short min = %d\n", -(signed short)((unsigned short)~0 >> 1) - 1);
@@ -40,11 +40,11 @@ int main()
     printf("unsigned long max = %lu\n", (unsigned long)~0);
 
     /*
-     *·½·¨3
-     *¸ù¾İ²¹Âë¹æÔò£¬8Î»µÄÓĞ·ûºÅ×îĞ¡ÖµÎª1000 0000 16Î»µÄÓĞ·ûºÅ×îĞ¡ÖµÎª1000 0000 0000 0000 
-     *Òò´Ë¿ÉÒÔ×óÒÆµÃµ½ÏàÓ¦Öµ
+     *æ–¹æ³•3
+     *æ ¹æ®è¡¥ç è§„åˆ™ï¼Œ8ä½çš„æœ‰ç¬¦å·æœ€å°å€¼ä¸º1000 0000 16ä½çš„æœ‰ç¬¦å·æœ€å°å€¼ä¸º1000 0000 0000 0000 
+     *å› æ­¤å¯ä»¥å·¦ç§»å¾—åˆ°ç›¸åº”å€¼
      */
-    printf("***********·½·¨3************\n");
+    printf("***********æ–¹æ³•3************\n");
     printf("signed char min = %d\n", (signed char)((unsigned char)~0 << 7));
     printf("signed char max = %d\n", (unsigned char)((unsigned char)~0 >> 1));
     printf("signed short min = %d\n", (signed short)((unsigned short)~0 << 15));
